@@ -1,0 +1,259 @@
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard MasterCode</title>
+    <link rel="stylesheet" href="/public/dashboard.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <div class="dashboard">
+      <header>
+        <h1>MasterCode Dashboard</h1>
+      </header>
+      <main>
+        <section class="panel">
+          <h2>Usuários Matriculados</h2>
+          <div class="card-content">
+            <ul class="list-flat">
+              <li>João Silva</li>
+              <li>Maria Oliveira</li>
+              <li>Lucas Santos</li>
+              <li>Ana Costa</li>
+            </ul>
+            <canvas id="chartUsuarios"></canvas>
+          </div>
+        </section>
+
+        <section class="panel">
+          <h2>Serviços a Executar</h2>
+          <div class="card-content">
+            <ul class="list-flat">
+              <li>Criação de E-commerce</li>
+              <li>App para Agendamento de Clínica Dentária</li>
+              <li>Sistema para Hortelário</li>
+            </ul>
+            <canvas id="chartServicos"></canvas>
+          </div>
+        </section>
+
+        <section class="panel">
+          <h2>Cursos e Formações</h2>
+          <div class="card-content">
+            <ul class="list-flat">
+              <li>Formação Full Stack</li>
+              <li>Curso de Frontend</li>
+              <li>Curso de Backend</li>
+              <li>UX/UI Design</li>
+            </ul>
+            <canvas id="chartCursos"></canvas>
+          </div>
+        </section>
+        <section class="panel">
+          <h2>Quantidade de Equipamentos</h2>
+          <div class="card-content">
+            <p>Total de Equipamentos: <span id="equipamentosTotal">0</span></p>
+            <p>Estoque: <span id="estoqueStatus">Carente</span></p>
+            <canvas id="chartEstoque"></canvas>
+          </div>
+        </section>
+
+        <section class="panel">
+          <h2>Nível de Atendimento</h2>
+          <div class="card-content">
+            <p>
+              Atendimentos Concluídos: <span id="atendimentosTotal">0%</span>
+            </p>
+            <canvas id="chartAtendimento"></canvas>
+          </div>
+        </section>
+
+        <section class="panel">
+          <h2>Gestão de Satisfação do Cliente</h2>
+          <div class="card-content">
+            <p>Satisfeitos: <span id="satisfeitos">0%</span></p>
+            <p>Insatisfeitos: <span id="insatisfeitos">0%</span></p>
+            <p>A Melhorar: <span id="melhorar">0%</span></p>
+            <canvas id="chartSatisfacao"></canvas>
+          </div>
+        </section>
+
+
+        <section class="panel">
+       <h3>Usuários Matriculados</h3>          <div class="card-content">
+            <p>Satisfeitos: <span id="satisfeitos">0%</span></p>
+            <p>Insatisfeitos: <span id="insatisfeitos">0%</span></p>
+            <p>A Melhorar: <span id="melhorar">0%</span></p>
+            <canvas id="usuariosChart"></canvas>
+          </div>
+        </section>
+
+
+        <section class="panel">
+        <h3>Gestão de Satisfação do Cliente</h3>         
+           <div class="card-content">
+            <p>Satisfeitos: <span id="satisfeitos">0%</span></p>
+            <p>Insatisfeitos: <span id="insatisfeitos">0%</span></p>
+            <p>A Melhorar: <span id="melhorar">0%</span></p>
+            <canvas id="satisfacaoChart"></canvas>
+          </div>
+        </section>
+      
+
+      </main>
+    </div>
+
+    <script>
+      const usuariosCtx = document
+        .getElementById("chartUsuarios")
+        .getContext("2d");
+      new Chart(usuariosCtx, {
+        type: "doughnut",
+        data: {
+          labels: ["João", "Maria", "Lucas", "Ana"],
+          datasets: [
+            {
+              label: "Usuários",
+              data: [25, 30, 20, 25],
+              backgroundColor: ["#00ff00", "#00cc00", "#009900", "#006600"],
+            },
+          ],
+        },
+        options: {
+          plugins: { legend: { labels: { color: "#00ff00" } } },
+        },
+      });
+
+      const servicosCtx = document
+        .getElementById("chartServicos")
+        .getContext("2d");
+      new Chart(servicosCtx, {
+        type: "pie",
+        data: {
+          labels: ["E-commerce", "App Clínica", "Hortelário"],
+          datasets: [
+            {
+              label: "Serviços",
+              data: [50, 30, 20],
+              backgroundColor: ["#00ff00", "#00cc00", "#006600"],
+            },
+          ],
+        },
+        options: {
+          plugins: { legend: { labels: { color: "#00ff00" } } },
+        },
+      });
+
+      const cursosCtx = document.getElementById("chartCursos").getContext("2d");
+      new Chart(cursosCtx, {
+        type: "doughnut",
+        data: {
+          labels: ["Full Stack", "Frontend", "Backend", "UX/UI"],
+          datasets: [
+            {
+              label: "Vendas de Cursos",
+              data: [40, 30, 20, 10],
+              backgroundColor: ["#00ff00", "#00cc00", "#009900", "#006600"],
+            },
+          ],
+        },
+        options: {
+          plugins: { legend: { labels: { color: "#00ff00" } } },
+        },
+      });
+      // Configuração do gráfico de estoque
+      const estoqueCtx = document
+        .getElementById("chartEstoque")
+        .getContext("2d");
+      new Chart(estoqueCtx, {
+        type: "doughnut",
+        data: {
+          labels: ["Carente", "Moderado", "Abastecido"],
+          datasets: [
+            {
+              data: [30, 40, 30],
+              backgroundColor: ["#ff0000", "#ffcc00", "#00ff00"],
+            },
+          ],
+        },
+        options: { plugins: { legend: { labels: { color: "#00ff00" } } } },
+      });
+
+      // Configuração do gráfico de atendimento
+      const atendimentoCtx = document
+        .getElementById("chartAtendimento")
+        .getContext("2d");
+      new Chart(atendimentoCtx, {
+        type: "bar",
+        data: {
+          labels: ["Satisfeitos", "Insatisfeitos", "A Melhorar"],
+          datasets: [
+            {
+              data: [60, 20, 20],
+              backgroundColor: ["#00ff00", "#ff0000", "#ffcc00"],
+            },
+          ],
+        },
+        options: {
+          scales: { y: { beginAtZero: true, max: 100 } },
+          plugins: { legend: { labels: { color: "#00ff00" } } },
+        },
+      });
+
+      // Configuração do gráfico de satisfação dos clientes
+      const satisfacaoCtx = document
+        .getElementById("chartSatisfacao")
+        .getContext("2d");
+      new Chart(satisfacaoCtx, {
+        type: "pie",
+        data: {
+          labels: ["Satisfeitos", "Neutros", "Insatisfeitos"],
+          datasets: [
+            {
+              data: [50, 30, 20],
+              backgroundColor: ["#00ff00", "#ffcc00", "#ff0000"],
+            },
+          ],
+        },
+        options: { plugins: { legend: { labels: { color: "#00ff00" } } } },
+      });
+
+    document.addEventListener("DOMContentLoaded", function () {
+        // Dados dos usuários
+        var usuariosCtx = document.getElementById("usuariosChart").getContext("2d");
+        new Chart(usuariosCtx, {
+            type: "bar",
+            data: {
+                labels: ["João", "Maria", "Lucas", "Ana"],
+                datasets: [{
+                    label: "Usuários Matriculados",
+                    data: [30, 45, 25, 50],
+                    backgroundColor: "rgba(75, 192, 192, 0.6)"
+                }]
+            }
+        });
+
+        // Gestão de satisfação
+        var satisfacaoCtx = document.getElementById("satisfacaoChart").getContext("2d");
+        new Chart(satisfacaoCtx, {
+            type: "pie",
+            data: {
+                labels: ["Satisfeitos", "Insatisfeitos", "A Melhorar"],
+                datasets: [{
+                    label: "Gestão de Satisfação",
+                    data: [70, 15, 15],
+                    backgroundColor: ["#4CAF50", "#FF5733", "#FFC107"]
+                }]
+            }
+        });
+    });
+
+
+      
+    </script>
+  </body>
+</html>

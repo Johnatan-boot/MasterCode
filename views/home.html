@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mastercode | Empresa de Software| Home</title>
+    <link rel="stylesheet" href="/public/home-mastercode-animation.css" />
+    <link rel="stylesheet" href="/public/animation.css" />
+    <link rel="stylesheet" href="/public/responsive.css" />
+    <link rel="stylesheet" href="/public/font-size-text.css" />
+    <link rel="stylesheet" href="/public/index.css" />
+  </head>
+  <body>
+    <custom-header></custom-header>
+   
+
+    <main class="main d-flex justify-content-center align-items-center">
+  <div class="animation-container">
+    <canvas id="matrixCanvas"></canvas>
+  </div>
+  <script class="main__animation__home" src="/scripts/home-mastercode-animation.js"></script>
+</main>
+
+
+ <main>
+<custom-home></custom-home>
+
+ </main>
+
+
+<main class="main__home__component d-flex justify-content-between">
+  <iframe class="home__video" 
+    src="https://www.youtube.com/embed/hMbexEPAOQI?si=CYscfw1_0Rtiv5fN" 
+    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
+    clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+  </iframe>
+
+ <carousel-component></carousel-component>
+<highlight-section>
+  <ul>
+    <li>🔹 Cursos Avançados</li>
+    <li>✨ Novidades e Atualizações</li>
+    <li>🚀 Suporte 24h</li>
+  </ul>
+</highlight-section>
+<highlight-section>
+  <div class="card">🚀 Desenvolvimento Full Stack</div>
+  <div class="card">💡 Inteligência Artificial</div>
+  <div class="card">🎨 UI/UX Design</div>
+</highlight-section>
+<highlight-section>
+  <blockquote>“A MasterCode mudou minha carreira!” – João Silva</blockquote>
+  <blockquote>“Aprendi desenvolvimento full stack aqui” – Maria Santos</blockquote>
+</highlight-section>
+
+<div class="container-button">
+  <button class="cta-btn">Inscreva-se Agora</button>
+<button class="cta-btn" id="trigger-comments">Mostrar Comentários</button>
+<div id="comments-container" class="fade-effect">  
+  <p>“Ótimo curso! Aprendi muito” – João</p>
+  <p>“A melhor plataforma para devs” – Maria</p>
+</div>
+</div>
+<faq-section></faq-section>
+<iframe 
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3..."
+  width="100%" height="300" frameborder="0" allowfullscreen>
+</iframe>
+<latest-posts></latest-posts>
+<partners-section></partners-section>
+
+
+
+</main>
+
+
+     </> <!-- Script para animação -->
+
+     
+     <contato-component></contato-component>
+
+   <footer-component></footer-component>
+
+    <script src="/scripts/index.js"></script>
+
+    <script src="/components/homeComponent.js"></script>
+    <script src="/components/carousselBootstrap.js"></script>
+    <script src="/components/highlightSectionComponent.js"></script>
+    <script src="/components/faqSectionComponent.js"></script>
+    <script src="/components/latestPostComponent.js"></script>
+    <script src="/components/partnersSectionComponent.js"></script>
+    <script src="/components/headerComponents.js"></script>
+    <script src="/components/cardComponent.js"></script>
+    <script src="/components/formComponent.js"></script>
+     <script src="/components/contatoComponent.js"></script>
+    <script src="/components/footerComponent.js"></script>
+  </body>
+</html>

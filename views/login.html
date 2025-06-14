@@ -1,0 +1,29 @@
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MasterCode Login</title>
+  <link rel="stylesheet" href="/public/login-interface-animation.css" />
+</head>
+<body>
+  <canvas id="matrix"></canvas>
+
+  <div class="login-container">
+    <h1 class="logo">MASTER<span>CODE</span></h1>
+    <form class="login-form" onsubmit="login(event)">
+      <input type="text" placeholder="Usuário" required />
+      <input type="password" placeholder="Senha" required />
+      <button type="submit">Entrar</button>
+    </form>
+    <p class="footer-text">© 2025 MasterCode. Todos os direitos reservados.</p>
+  </div>
+
+  <script src="/scripts/login-interface-animation.js"></script>
+  <script>
+    function login(e) {
+      e.preventDefault();
+      window.location.href = 'dashboard.html';
+    }
+  </script>
+</body>
+</html>
