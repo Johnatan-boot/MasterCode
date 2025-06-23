@@ -1,100 +1,124 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mastercode | Empresa de Software| Home</title>
-    <link rel="stylesheet" href="/public/home-mastercode-animation.css" />
-    <link rel="stylesheet" href="/public/animation.css" />
-    <link rel="stylesheet" href="/public/responsive.css" />
-    <link rel="stylesheet" href="/public/font-size-text.css" />
-    <link rel="stylesheet" href="/public/index.css" />
-  </head>
-  <body>
-    <custom-header></custom-header>
-   
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mastercode | Empresa de Software | Home</title>
 
-    <main class="main d-flex justify-content-center align-items-center">
-  <div class="animation-container">
-    <canvas id="matrixCanvas"></canvas>
+  <!-- Estilos globais -->
+  <link rel="stylesheet" href="/home-mastercode-animation.css" />
+  <link rel="stylesheet" href="/animation.css" />
+  <link rel="stylesheet" href="/responsive.css" />
+  <link rel="stylesheet" href="/font-size-text.css" />
+  <link rel="stylesheet" href="/index.css" />
+</head>
+<body>
+  <custom-header></custom-header>
+
+ <!-- Matrix Effect -->
+<section class="matrix-section">
+  <canvas id="matrixCanvas"></canvas>
+</section>
+
+<!-- Colunas: Carrossel + Vídeo -->
+<section class="media-grid">
+  <div class="carousel-area">
+    <carousel-component></carousel-component>
   </div>
-  <script class="main__animation__home" src="/scripts/home-mastercode-animation.js"></script>
-</main>
-
-
- <main>
-<custom-home></custom-home>
-
- </main>
-
-
-<main class="main__home__component d-flex justify-content-between">
-  <iframe class="home__video" 
-    src="https://www.youtube.com/embed/hMbexEPAOQI?si=CYscfw1_0Rtiv5fN" 
-    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
-    clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-  </iframe>
-
- <carousel-component></carousel-component>
-<highlight-section>
-  <ul>
-    <li>🔹 Cursos Avançados</li>
-    <li>✨ Novidades e Atualizações</li>
-    <li>🚀 Suporte 24h</li>
-  </ul>
-</highlight-section>
-<highlight-section>
-  <div class="card">🚀 Desenvolvimento Full Stack</div>
-  <div class="card">💡 Inteligência Artificial</div>
-  <div class="card">🎨 UI/UX Design</div>
-</highlight-section>
-<highlight-section>
-  <blockquote>“A MasterCode mudou minha carreira!” – João Silva</blockquote>
-  <blockquote>“Aprendi desenvolvimento full stack aqui” – Maria Santos</blockquote>
-</highlight-section>
-
-<div class="container-button">
-  <button class="cta-btn">Inscreva-se Agora</button>
-<button class="cta-btn" id="trigger-comments">Mostrar Comentários</button>
-<div id="comments-container" class="fade-effect">  
-  <p>“Ótimo curso! Aprendi muito” – João</p>
-  <p>“A melhor plataforma para devs” – Maria</p>
-</div>
-</div>
-<faq-section></faq-section>
-<iframe 
-  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3..."
-  width="100%" height="300" frameborder="0" allowfullscreen>
-</iframe>
-<latest-posts></latest-posts>
-<partners-section></partners-section>
+  <div class="video-area">
+    <iframe
+      src="https://www.youtube.com/embed/hMbexEPAOQI?si=CYscfw1_0Rtiv5fN"
+      title="Vídeo MasterCode"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen
+      loading="lazy">
+    </iframe>
+  </div>
+</section>
 
 
 
-</main>
+
+    <!-- Destaques em grid -->
+    <section class="highlights">
+      <highlight-section></highlight-section>
+    </section>
+
+    <!-- Depoimentos -->
+    <section class="depoimentos">
+      <highlight-section></highlight-section>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+      <h2>Transforme sua carreira com a MasterCode</h2>
+      <div class="cta-buttons">
+        <button class="cta-btn">Inscreva-se Agora</button>
+        <button class="cta-btn" id="trigger-comments">Mostrar Comentários</button>
+      </div>
+      <div id="comments-container" class="fade-effect hidden">  
+        <p>“Ótimo curso! Aprendi muito” – João</p>
+        <p>“A melhor plataforma para devs” – Maria</p>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <faq-section></faq-section>
+
+    <!-- Localização -->
+    <section class="mapa-section">
+      <h2>Estamos Aqui</h2>
+      <div class="mapa-container">
+        <iframe src="https://www.google.com/maps/embed?pb=..." allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </section>
+
+    <!-- Posts recentes e parceiros -->
+    <latest-posts></latest-posts>
+    <partners-section></partners-section>
+  </main>
+  <section class="numeros-section">
+  <h2>Impacto da MasterCode</h2>
+  <div class="numeros-grid">
+    <div>
+      <h3>+5.000</h3>
+      <p>Alunos formados</p>
+    </div>
+    <div>
+      <h3>99%</h3>
+      <p>Satisfação geral</p>
+    </div>
+    <div>
+      <h3>+120</h3>
+      <p>Projetos entregues</p>
+    </div>
+  </div>
+</section>
+<section class="terminal-quote">
+  <p>&gt; Transformando código em carreira...</p>
+</section>
 
 
-     </> <!-- Script para animação -->
+  <!-- Contato e Rodapé -->
+  <contato-component></contato-component>
+  <footer-component></footer-component>
 
-     
-     <contato-component></contato-component>
-
-   <footer-component></footer-component>
-
-    <script src="/scripts/index.js"></script>
-
-    <script src="/components/homeComponent.js"></script>
-    <script src="/components/carousselBootstrap.js"></script>
-    <script src="/components/highlightSectionComponent.js"></script>
-    <script src="/components/faqSectionComponent.js"></script>
-    <script src="/components/latestPostComponent.js"></script>
-    <script src="/components/partnersSectionComponent.js"></script>
-    <script src="/components/headerComponents.js"></script>
-    <script src="/components/cardComponent.js"></script>
-    <script src="/components/formComponent.js"></script>
-     <script src="/components/contatoComponent.js"></script>
-    <script src="/components/footerComponent.js"></script>
-  </body>
+   <!-- Scripts -->
+   <!-- Script da Animação Matrix -->
+<script src="/scripts/home-mastercode-animation.js"></script>
+  <script src="/scripts/index.js"></script>
+  <script src="/components/homeComponent.js"></script>
+  <script src="/components/carousselBootstrap.js"></script>
+  <script src="/components/highlightSectionComponent.js"></script>
+  <script src="/components/faqSectionComponent.js"></script>
+  <script src="/components/latestPostComponent.js"></script>
+  <script src="/components/partnersSectionComponent.js"></script>
+  <script src="/components/headerComponents.js"></script>
+  <script src="/components/cardComponent.js"></script>
+  <script src="/components/formComponent.js"></script>
+  <script src="/components/contatoComponent.js"></script>
+  <script src="/components/footerComponent.js"></script>
+</body>
 </html>
