@@ -13,9 +13,9 @@ class HeaderComponent extends HTMLElement {
         <h1>Bem-vindo à Mastercode — Empresa de Software</h1>
         <nav>
           <ul>
-            <li><a href="/home">Home</a></li>
-            <li><a href="/servicos">Serviços</a></li>
-            <li><a href="/form-email">Contato</a></li>
+            <li><a href="/views/home">Home</a></li>
+            <li><a href="/views/servicos">Serviços</a></li>
+            <li><a href="/views/form-email">Contato</a></li>
           </ul>
         </nav>
       </header>
