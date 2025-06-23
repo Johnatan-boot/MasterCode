@@ -3,11 +3,11 @@ class HeaderComponent extends HTMLElement {
     this.innerHTML = `
       <header>
         <div class="header__img">
-          <img class="img__header" src="/assets/matrix.jpg" alt="Imagem de fundo" />
+          <img class="img__header" src="public/assets/matrix.jpg" alt="Imagem de fundo" />
         </div>
         <div class="header__logo">
           <a href="/">
-            <img src="/assets/logo.png" alt="Logo MasterCode">
+            <img src="public/assets/logo.png" alt="Logo MasterCode">
           </a>
         </div>
         <h1>Bem-vindo à Mastercode — Empresa de Software</h1>
