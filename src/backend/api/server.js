@@ -22,6 +22,7 @@ app.use('/components', express.static(componentsPath));
 app.get('/', (req, res) => res.sendFile(path.join(rootPath, 'index.html')));
 app.get('/login', (req, res) => res.sendFile(path.join(rootPath, 'login.html')));
 app.get('/dashboard', (req, res) => res.sendFile(path.join(rootPath, 'dashboard.html')));
+app.get('/servicos', (req, res) => res.sendFile(path.join(rootPath, 'servicos.html')));
 app.get('/form-email', (req, res) => res.sendFile(path.join(rootPath, 'form-email.html')));
 
 app.post('/form-email', (req, res) => {
