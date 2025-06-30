@@ -41,9 +41,9 @@ class CarouselComponent extends HTMLElement {
 
   <div class="carousel-container">
     <div class="carousel">
-      <img src="public/assets/imagem1.jpg" alt="Slide 1">
-      <img src="public/assets/imagem2.jpg" alt="Slide 2">
-      <img src="public/assets/imagem3.jpg" alt="Slide 3">
+      <img src="/assets/imagem1.jpg" alt="Slide 1">
+      <img src="/assets/imagem2.jpg" alt="Slide 2">
+      <img src="/assets/imagem3.jpg" alt="Slide 3">
     </div>
     <button class="controls prev">&lt;</button>
     <button class="controls next">&gt;</button>
